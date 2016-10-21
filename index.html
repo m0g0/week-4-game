@@ -19,7 +19,7 @@
 	<h2>Select a Gem to increase value</h2>
 
 	<p id="usersScore">
-		Your Score:
+		Your Score: 
 	</p>
 	
 	<div class="gem1" onclick="gem1Value()">
@@ -27,27 +27,42 @@
 		<p id="displayGem1"></p>
 	</div>
 	
-	<div class="gem2">
-	<button type="button">Gem 2</button>
+	<div class="gem2" onclick="gem2Value()">
+		<button type="button">Gem 2</button>
+		<p id="displayGem2"></p>
 	</div>
 
-	<div class="gem3">
-	<button type="button">Gem 3</button>
+	<div class="gem3" onclick="gem3Value()">
+		<button type="button">Gem 3</button>
+		<p id="displayGem3"></p>
 	</div>
 
 <script>
 
 var randomNumToBeat = 0;
 var usersValue = 0;
+var gembutton1 = 35;
+var gembutton2 = 45;
+var gembutton3 = 2;
 
 	function randomNum() {
     var randomNumToBeat = document.getElementById("displayRandomNum")
     randomNumToBeat.innerHTML = Math.floor((Math.random() * 100) + 1);
-}
+	}
+	
 	function gem1Value() {
-    var usersValue = document.getElementById("displayGem1").value;
-    document.getElementById("displayGem1").innerHTML = usersValue;
-}
+    document.getElementById("displayGem1").innerHTML = gembutton1;
+	}
+
+	function gem2Value() {
+    document.getElementById("displayGem2").innerHTML = gembutton2;
+	}
+
+	function gem3Value() {
+    document.getElementById("displayGem3").innerHTML = gembutton3;
+	}
+
+
 </script>
 
 </body>
