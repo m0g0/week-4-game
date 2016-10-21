@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Gem Game</title>
+</head>
+<body>
+	<h1>Gem Game</h1>
+
+	<p>Click the button to display a random number between 1 and 100. <br>
+	Then try getting a higher value by selecting gems!</p>
+	
+
+
+	<button onclick="randomNum()">Random number to beat</button>
+
+	<p id="displayRandomNum"></p>
+
+	<h2>Select a Gem to increase value</h2>
+
+	<p id="usersScore">
+		Your Score:
+	</p>
+	
+	<div class="gem1" onclick="gem1Value()">
+		<button type="button">Gem 1</button>
+		<p id="displayGem1"></p>
+	</div>
+	
+	<div class="gem2">
+	<button type="button">Gem 2</button>
+	</div>
+
+	<div class="gem3">
+	<button type="button">Gem 3</button>
+	</div>
+
+<script>
+
+var randomNumToBeat = 0;
+var usersValue = 0;
+
+	function randomNum() {
+    var randomNumToBeat = document.getElementById("displayRandomNum")
+    randomNumToBeat.innerHTML = Math.floor((Math.random() * 100) + 1);
+}
+	function gem1Value() {
+    var usersValue = document.getElementById("displayGem1").value;
+    document.getElementById("displayGem1").innerHTML = usersValue;
+}
+</script>
+
+</body>
+</html>
